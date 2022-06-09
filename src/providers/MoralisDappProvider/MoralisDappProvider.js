@@ -6,48 +6,7 @@ function MoralisDappProvider({ children }) {
   const { web3, Moralis, user } = useMoralis();
   const [walletAddress, setWalletAddress] = useState();
   const [chainId, setChainId] = useState();       
-  const [contractABI, setContractABI] = useState([
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "nftContract",
-				"type": "address"
-			},
-			{
-				"internalType": "uint256",
-				"name": "tokenId",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "price",
-				"type": "uint256"
-			}
-		],
-		"name": "createMarketItem",
-		"outputs": [],
-		"stateMutability": "payable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "nftContract",
-				"type": "address"
-			},
-			{
-				"internalType": "uint256",
-				"name": "itemId",
-				"type": "uint256"
-			}
-		],
-		"name": "createMarketSale",
-		"outputs": [],
-		"stateMutability": "payable",
-		"type": "function"
-	},
+  const [contractABI, setContractABI] = useState('[
 	{
 		"inputs": [],
 		"stateMutability": "nonpayable",
@@ -122,6 +81,47 @@ function MoralisDappProvider({ children }) {
 		"type": "event"
 	},
 	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "nftContract",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "tokenId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "price",
+				"type": "uint256"
+			}
+		],
+		"name": "createMarketItem",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "nftContract",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "itemId",
+				"type": "uint256"
+			}
+		],
+		"name": "createMarketSale",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
 		"inputs": [],
 		"name": "fetchMarketItems",
 		"outputs": [
@@ -184,8 +184,8 @@ function MoralisDappProvider({ children }) {
 		"stateMutability": "view",
 		"type": "function"
 	}
-]); //Smart Contract ABI here
-  const [marketAddress, setMarketAddress] = useState(0x747Aa99aac0b04C6bA90cB3DC11920366bD5bdE4); //Smart Contract Address Here
+]');
+  const [marketAddress, setMarketAddress] = useState('0x747Aa99aac0b04C6bA90cB3DC11920366bD5bdE4'); //Smart Contract Address Here
 
 
   useEffect(() => {
